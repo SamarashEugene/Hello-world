@@ -1,1 +1,13 @@
-<form action=""><input type="text"></form>
+<form action="">
+  <input type="text" value="qwe">
+</form>
+
+<div>
+  <button [class.colorButtonOn]="colorTextOn"
+          (click)="toggleButtonOn()"
+  ><b>{{ toggle }}</b></button>
+</div>
+
+<div class="text" *ngIf="show">
+  <p>{{ lorem }}</p>
+</div>
