@@ -8,7 +8,7 @@ import localeUk from '@angular/common/locales/uk';
 
 import {CardComponent} from './card/card.component';
 import {AppComponent} from './app.component';
-import {FormComponent} from './form/form.component';
+import { TestComponent } from './test/test.component';
 
 registerLocaleData(localeUk, 'uk');
 
@@ -16,7 +16,7 @@ registerLocaleData(localeUk, 'uk');
   declarations: [
     AppComponent,
     CardComponent,
-    FormComponent
+    TestComponent
   ],
   imports: [
     BrowserModule,
