@@ -1,32 +1,38 @@
-import {Component, Input, OnInit} from '@angular/core';
-import {Card} from '../app.component';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-form',
   templateUrl: './form.component.html',
   styleUrls: ['./form.component.css']
 })
-export class FormComponent implements OnInit {
+export class CardComponent implements OnInit {
 
   colorTextOn: boolean;
-  toggle = 'On';
+  toggle = 'On`';
 
   show = false;
 
   text1 = 'Lorem it. in itaque nulla praesentium.';
 
+  ngOnInit() {
+    setTimeout(() => {
+      this.text1 = 'sddsf dsf w grg sre w3 fd wr!';
+    }, 1000);}
+
 
   toggleButtonOn() {
     this.colorTextOn = !this.colorTextOn;
     this.show = !this.show;
-    if (this.show === true) {
-      this.toggle = 'Of';
+
+    if (this.show == false) {
+      this.toggle = 'On';
     } else {
-      this.toggle = 'On'
+      this.toggle = 'Of';
     }
+
   }
 
-  inputHendler(event: any){
+  inputHendler(event: any) {
     const value = event.target.value;
     this.text1 = value;
   }
