@@ -1,5 +1,5 @@
-import {Component, OnInit} from '@angular/core';
-import {stringify} from 'querystring';
+import {Component, Input, OnInit} from '@angular/core';
+import {Card} from '../app.component';
 
 @Component({
   selector: 'app-form',
@@ -8,18 +8,12 @@ import {stringify} from 'querystring';
 })
 export class FormComponent implements OnInit {
 
-  constructor() {
-  }
-
-  ngOnInit(): void {
-  }
-
   colorTextOn: boolean;
   toggle = 'On';
 
   show = false;
 
-  lorem = 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolores est itaque quisquam velit voluptate. Aliquid eligendi in itaque nulla praesentium.';
+  text1 = 'Lorem it. in itaque nulla praesentium.';
 
 
   toggleButtonOn() {
@@ -30,6 +24,11 @@ export class FormComponent implements OnInit {
     } else {
       this.toggle = 'On'
     }
+  }
+
+  inputHendler(event: any){
+    const value = event.target.value;
+    this.text1 = value;
   }
 
 }
